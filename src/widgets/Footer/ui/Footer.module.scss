@@ -1,0 +1,124 @@
+.footer{
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 1920px) 1fr;
+    padding: 0px 20px;
+}
+
+.header {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--grayShades-12);
+    padding: 35px 0px;
+}
+.socials {
+    justify-content: end;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.follow {
+    font-size: 18px;
+    color: var(--white);
+}
+.container {
+    grid-column: 2 / 3;
+    display: grid;
+    gap: 30px;
+}
+
+.social{
+    padding: 20px;
+    border-radius: 100%;
+    background: linear-gradient(to bottom, #1A1A1A, transparent);
+    position: relative;
+    &:after{
+        content: '';
+        border-radius: 100%;
+        inset: 0;
+        padding: 1px;
+        mask: 
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        position: absolute;
+        background: linear-gradient(to bottom, #262626, transparent);
+    }
+}
+
+
+.content {
+    display: grid;
+    gap: 30px;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding: 60px 0px;
+}
+
+.section {
+    display: grid;
+    gap: 20px;
+    grid-auto-rows: max-content;
+}
+.linksSection {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.titleSection {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+}
+.linkSection {
+    font-size: 14px;
+    color: var(--whiteShades-50);
+    text-decoration: none;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--whiteShades-50);
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.rights {
+    border-top: 1px solid var(--grayShades-12);
+    grid-auto-flow: column;
+    display: grid;
+    padding: 24px 0px;
+    justify-content: space-between;
+}
+
+.rightLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.right{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--grayShades-40);
+    transition: color 0.3s ease;
+    &:hover{
+        color: var(--white);
+    }
+}
+
+@media (max-width: 1440px) {
+    .content{
+        padding: 30px 0px;
+    }
+}

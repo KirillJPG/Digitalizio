@@ -1,0 +1,51 @@
+.works {
+    display: grid;
+    gap: 80px;
+}
+
+.header {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--grayShades-40);
+    
+    span {
+        color: var(--white);
+    }
+}
+
+.description {
+    font-size: 18px;
+    color: var(--whiteShades-50);
+    line-height: 1.5;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+@media (max-width: 1440px) {
+    .works {
+        gap: 80px;
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .cards {
+        gap: 20px;
+    }
+}

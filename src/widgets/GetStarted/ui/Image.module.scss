@@ -1,0 +1,13 @@
+
+.image{
+    position: relative;
+}
+.blur{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: #0F0F0F20;
+    backdrop-filter: blur(10px);
+}

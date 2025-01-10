@@ -1,0 +1,46 @@
+.services {
+    display: grid;
+    gap: 60px;
+}
+
+.header {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    justify-items: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--grayShades-40);
+    text-align: center;
+    padding-bottom: 20px;
+    span {
+        color: var(--white);
+    }
+}
+
+.description {
+    font-size: 18px;
+    color: var(--whiteShades-50);
+    text-align: center;
+    line-height: 1.5;
+    padding-bottom: 80px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1440px) {
+    .title{
+        font-size: 38px;
+    }
+    .description{
+        font-size: 16px;
+    }
+
+}

@@ -1,0 +1,94 @@
+
+.advantageCard {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0px;
+    button {
+        justify-self: center;
+        display: grid;
+        align-items: center;
+        grid-auto-flow: column;
+        gap: 30px;
+        border-radius: 50px;
+        border: 1px solid var(--grayShades-12);
+        background: var(--grayShades-6);
+    }
+    transition: all 0.3s ease;
+}
+.advantageCard:hover {
+    background: var(--grayShades-15);
+    border-radius: 20px;
+    transform: translateY(20px);
+    button {
+        background: var(--white);
+        color: var(--grayShades-15);
+    }
+    .arrowIcon {
+        background: var(--whiteShades-55);
+    }
+}
+
+.arrowIcon {
+    padding: 17px 25px;
+    background: var(--grayShades-10);
+    border-radius: 30px;
+
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);    
+}
+
+.description {
+    font-size: 18px;
+    color: var(--whiteShades-55);
+}
+
+.icon {
+    overflow: hidden;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    border-radius: 100%;
+    width: 92px;
+    height: 92px;
+    border: 10px solid var(--grayShades-30);
+}
+
+.bgIcon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom, #FFFFFF30, #FFFFFF00);
+
+}
+
+@media (max-width: 1440px) {
+    .title {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 16px;
+    }
+    .advantageCard {
+        button{
+            padding: 12px 20px;
+            gap: 15px;
+        }
+    }
+    .arrowIcon {
+        padding: 12px 19px;
+    }
+    .icon {
+        width: 66px;
+        height: 66px;
+        border: 6px solid var(--grayShades-30);
+    }
+}
+

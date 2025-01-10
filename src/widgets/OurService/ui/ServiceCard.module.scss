@@ -1,0 +1,140 @@
+.card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 80px 30px 50px 30px ;
+    mask-composite: exclude;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    
+    button {
+        justify-self: center;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 10px;
+        padding: 2px;
+        background: linear-gradient(to bottom, #292929, transparent);
+        mask: 
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+    }
+}
+.bgIcon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    background: radial-gradient(center  , #FFFFFF, #FFFFFF);
+
+}
+
+.title{ 
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--white);
+    padding-bottom: 20px;
+    padding-top: 50px;
+
+}
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--whiteShades-55);
+    padding-bottom: 50px;
+}
+
+
+.icon {
+    padding: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle at top, #1F1F1F , transparent );
+       
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        padding: 2px;
+        background: linear-gradient(to bottom, #333333, transparent);
+        mask: 
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+    }
+    svg {
+        position: relative;
+        z-index: 10;
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@for $i from 1 through 4{
+    .icon:nth-child(#{$i}) {
+        animation-delay: $i * 1s;
+    }
+}
+
+.preview {
+    z-index: 20;
+    position: relative;
+    justify-self: center;
+    &:hover{
+        
+        .icon{
+            animation: filling 1s ease both;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+
+@keyframes filling {
+    0% {
+        background: transparent;
+    }
+    100% {
+        background: var(--whiteShades-55);
+    }
+}
+
+@media (max-width: 1440px) {
+    .card {
+        padding: 80px 15px 30px 15px;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .description{
+        font-size: 16px;
+    }
+    .icon{
+        padding: 15px;
+    }
+}
+

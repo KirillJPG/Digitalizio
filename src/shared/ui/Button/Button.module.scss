@@ -1,0 +1,36 @@
+.button {
+    padding: 18px 24px;
+    position: relative;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        filter: brightness(.5);
+        cursor: pointer;
+    }
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.primary {
+    color: var(--grayShades-10);
+    background: var(--white);
+    text-align: center;
+}
+
+.secondary {
+    background: var(--grayShades-10);
+    border: 1px solid var(--grayShades-15);
+    color: var(--white);
+}
+
+@media (max-width: 1440px) {
+    .button {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+}
