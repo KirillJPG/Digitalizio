@@ -1,7 +1,10 @@
-const NotFoundPage = () => {
+import styles from './NotFoundPage.module.scss';
+
+function NotFoundPage(){
     return (
-        <div>
-            <h1>Страница не найдена</h1>
+        <div className={styles.container}>
+            <div className={styles.title}>404</div>
+            <div className={styles.description}>Page not found</div>
         </div>
     );
 };

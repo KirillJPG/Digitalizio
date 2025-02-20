@@ -1,0 +1,54 @@
+
+
+.trackCanvas {
+    width: 500px;
+    height: 500px;
+    transition: 0s;
+    rotate: 0;
+}
+
+
+.rotate{
+    rotate: var(--rotate);
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.trackStatus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    color: var(--white);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    transition: .5s;
+    font-size: 24px;
+    font-weight: 500;
+    background: #00000099;
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+
+.waiting{
+    transition: .3s;
+    opacity: 0;
+}
+
+// 1 deg = 0,017 
+// to left 10deg
+// 1 cell = 20deg
+
+.tringle{
+    position: absolute;
+    top: 0; 
+    left: 50%;
+    transform: translate(-50%,200%);
+    width: 25px;
+    z-index: 10;
+    height: 25px;
+    background: var(--whiteShades-55);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}

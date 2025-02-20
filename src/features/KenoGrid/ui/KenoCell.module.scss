@@ -1,0 +1,38 @@
+.kenoCell {
+    padding: 5px;
+    border-radius: 100%;
+    background: var(--grayShades-20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+    border: 3px solid transparent;
+}
+.kenoCell:hover {
+    background: var(--grayShades-40);
+}
+.kenoCell.selected {
+    background: var(--grayShades-40);
+}
+.kenoCell.win {
+    animation: win 1s linear both;
+}
+.kenoCellNumber {
+    font-size: 20px;
+    padding: 15px;
+    color: var(--whiteShades-90);
+    font-weight: bold;
+    border: 2px solid var(--whiteShades-55);
+    border-radius: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes win {
+    0% {
+        border: 3px solid transparent;
+    }
+    100% {
+        border: 3px solid var(--white);
+    }
+}

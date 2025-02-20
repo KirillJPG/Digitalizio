@@ -1,0 +1,22 @@
+.roullete{
+    display:grid;
+    gap: 25px;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+.lists{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3,minmax(200px,1fr));
+}
+.actions{
+    display: grid;
+    width: 100%;
+    grid-auto-rows: max-content;
+    flex-direction: column;
+    gap: 10px;
+}
+.roulleteTrack{
+    padding: 10px;
+    position: relative;
+}

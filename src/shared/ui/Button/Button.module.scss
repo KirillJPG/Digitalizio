@@ -13,6 +13,7 @@
     }
     &:disabled {
         cursor: not-allowed;
+        background: var(--grayShades-40);
     }
 }
 

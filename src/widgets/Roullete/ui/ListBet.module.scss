@@ -1,0 +1,53 @@
+.listBet{
+    display: grid;
+    grid-auto-rows: max-content;
+    gap: 5px;
+    border: 2px solid var(--grayShades-15);
+    border-radius: 10px;
+    padding: 15px;
+    background: var(--grayShades-6);
+    transition: .3s;
+}
+.empty{
+    color: var(--white);
+    font-size: 18px;
+}
+.title{
+    font-size: 18px;
+    font-weight: 600;
+}
+.green{
+    border:2px solid green;
+    .title{
+        color:green;
+    }
+}
+.black{
+    border:2px solid black;
+    .title{
+        color:black;
+        
+    }
+}
+.red{
+    border:2px solid red;
+    .title{
+        color:red;
+    }
+}
+
+.header{
+    display:grid;
+    justify-content: space-between;
+    grid-auto-flow: column;
+}
+.cash{
+    font-size: 18px;
+    color: var(--white);
+}
+.win{
+    border: 2px solid yellow;
+    .title{
+        color: yellow;
+    }
+}

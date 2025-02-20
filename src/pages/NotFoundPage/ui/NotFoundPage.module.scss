@@ -1,0 +1,21 @@
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 50vh;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+}
+.description {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white);
+}
+
+

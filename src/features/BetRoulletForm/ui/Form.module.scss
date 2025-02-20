@@ -1,0 +1,46 @@
+.form{
+    display: grid;
+    gap: 30px;
+    grid-auto-columns: max-content;
+}
+.formTitle{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.radios{
+    display: flex;
+    gap: 20px;
+}
+
+.formButton{
+    justify-self: start;
+}
+    
+
+.error{
+    color: red;
+    font-size: 24px;
+    font-weight: 500;
+    animation: visible 1s;
+}
+.success{
+    color: rgb(1, 161, 1);
+    font-size: 24px;
+    font-weight: 500;
+    animation: visible 1s;
+}
+
+.result{
+    height: 35px;
+}
+
+@keyframes visible {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

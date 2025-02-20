@@ -5,16 +5,21 @@ import { OurTestimonials } from "@/widgets/OurTestimonials";
 import { OurWorks } from "@/widgets/OurWorks";
 import { FAQ } from "@/widgets/FAQ";
 import styles from './MainPage.module.scss';
+import { Suspense } from "react";
+import { Loader } from "@/widgets/Loader";
+
 const MainPage = () => {
     return (
-        <div className={styles.mainPage}>
-            <GetStarted />
-            <Advantages />
-            <OurService />
-            <OurWorks />
-            <OurTestimonials />
-            <FAQ />
-        </div>
+        <Suspense fallback={<Loader />}>
+            <div className={styles.mainPage}>
+                <GetStarted />
+                <Advantages />
+                <OurService />
+                <OurWorks />
+                <OurTestimonials />
+                <FAQ />
+            </div>
+        </Suspense>
     );
 };
 

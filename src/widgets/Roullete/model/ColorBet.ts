@@ -1,0 +1,1 @@
+export type ColorBet = "green" | "black" | "red"

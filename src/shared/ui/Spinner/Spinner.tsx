@@ -7,7 +7,7 @@ interface SpinnerProps {
 
 export function Spinner({ size = 'medium' }:SpinnerProps){
     return (
-        <div className={clsx(styles.spinner, )}>
+        <div className={clsx(styles.spinner, styles[size])}>
             <div className={styles.circle}></div>
             <div className={styles.circle}></div>
             <div className={styles.circle}></div>

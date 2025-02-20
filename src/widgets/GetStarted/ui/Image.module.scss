@@ -1,11 +1,12 @@
 
 .image{
     position: relative;
+    width: 100%;
 }
 .blur{
     position: absolute;
     top: 40%;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 60%;
     background: #0F0F0F20;

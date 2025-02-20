@@ -1,0 +1,14 @@
+.pick{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+    transition: background .4s;
+    z-index: 20;
+    user-select: all;
+}
+.pick:hover{
+    background: gray;
+}

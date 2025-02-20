@@ -1,0 +1,21 @@
+.dropdownAction{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background: var(--grayShades-10);
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 5px;
+    *:hover{
+        background: transparent;
+        padding: 5px ;
+        filter: none;
+    }
+    *{
+        padding: 5px;
+    }
+    &:hover{
+        background: var(--grayShades-15);
+    }
+}

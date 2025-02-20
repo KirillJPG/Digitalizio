@@ -70,7 +70,7 @@ const footerSections: FooterSection[] = [
     }
 ];
 
-export function Footer() {
+export default function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>

@@ -1,0 +1,23 @@
+.editor{
+    position: relative;
+
+}
+.visible{
+    position: absolute;
+    background: #FFFFFF50;
+    border: 2px white dashed;
+    z-index: 10;
+}
+.pick{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+    transition: .4s;
+    z-index: 20;
+}
+.pick:hover{
+    background: gray;
+}

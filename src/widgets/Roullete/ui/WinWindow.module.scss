@@ -1,0 +1,87 @@
+
+@property --angle{
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+.winWindow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    background:  var(--grayShades-15);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    animation: visible .5s ease-in-out;
+    grid-auto-columns: max-content;
+    &:after{
+        --angle: 0deg;
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 5px solid transparent;
+        background: conic-gradient(from var(--angle),transparent 20%, var(--grayShades-15), gold) border-box , conic-gradient(from calc(var(--angle) + 180deg),transparent 20%, red) border-box;
+        mask: conic-gradient(#000 0 0) padding-box, conic-gradient(#000 0 0);
+        mask-composite: exclude;
+        border-radius: 10px;
+        z-index: 10;
+        animation: rotating 2s  linear  infinite;
+    }
+    
+}
+
+
+.title{
+    color: gold;
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+}
+.winAmount{
+    color: var(--white);
+    font-size: 42px;
+    font-weight: 500;
+    animation: win 1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    align-items: center;
+}
+.betNumber{
+    color: gold;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+@keyframes win {
+    0%{
+        scale: 5;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+@keyframes visible {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes rotating {
+    0%{
+        --angle: 0deg;
+    }
+    100%{
+        --angle: 360deg;
+    }
+}
+

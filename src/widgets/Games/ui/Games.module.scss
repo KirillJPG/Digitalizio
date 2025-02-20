@@ -1,0 +1,19 @@
+.games{
+    display: grid;
+    gap: 50px;
+    grid-auto-rows: max-content ;
+}
+.title{
+    font-size: 48px;
+    font-weight: 600;
+    background: linear-gradient(to right, var(--white), var(--whiteShades-50));
+    background-clip: text;
+    -webkit-text-fill-color:    transparent;
+    text-align: center;   
+}
+.gamesList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+

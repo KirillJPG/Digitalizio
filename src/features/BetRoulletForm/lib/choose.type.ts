@@ -1,0 +1,1 @@
+export type Choose = "red" | "black" | "green"

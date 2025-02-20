@@ -1,7 +1,9 @@
-import { ReactNode } from 'react';
+import { lazy, ReactNode, Suspense } from 'react';
 import { Header } from '@/widgets/Header';
 import styles from './Layout.module.scss';
-import { Footer } from '@/widgets/Footer';
+
+
+const Footer = lazy(() => import('@widgets/Footer/'));
 
 interface LayoutProps {
     children: ReactNode;
@@ -16,7 +18,9 @@ export function Layout ({ children }: LayoutProps){
                     {children}
                 </main>
             </div>
-            <Footer />
+            <Suspense >
+                <Footer />
+            </Suspense>
         </div>
     );
 }; 

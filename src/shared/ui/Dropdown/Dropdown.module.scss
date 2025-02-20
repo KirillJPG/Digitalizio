@@ -1,0 +1,27 @@
+.dropdown {
+  position: absolute;
+  display: grid;
+  grid-auto-columns: max-content;
+  grid-auto-rows: max-content;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  right: 0;
+  top: 100%;
+  overflow: hidden;
+  background: var(--grayShades-6);
+  border: 1px solid var(--grayShades-15); 
+  opacity: 0;
+}
+.dropdown.open { 
+  animation: open 0.5s ease-in-out;
+  opacity: 1;
+}
+@keyframes open {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
